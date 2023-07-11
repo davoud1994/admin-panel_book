@@ -1,0 +1,28 @@
+@font-face {
+  font-family: 'Yekan';
+  src: url('Yekan.eot');
+  src: url('Yekan.eot?#iefix') format('embedded-opentype'),
+  url('Yekan.woff') format('woff'),
+  url('Yekan.ttf')  format('truetype'),
+  url('Yekan.svg') format('svg');}
+
+.id_1{
+font-size: 15px;
+font-family: yekan,sans-serif;
+  }
+
+
+.image_add{
+object-fit: contain;
+  }
+
+
+.image_pro{
+  width:100px;
+  height:100px;
+  border-radius: 50px;
+}
+  
+
+ 
+
