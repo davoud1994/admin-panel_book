@@ -72,31 +72,32 @@ books| admin panel
 
         </h4>
       </div>
+
        <div class="card-body">
         <div class="table-responsive">
-          <table class="table">
+          <table id="datatable"  class="table table-striped">
             <thead class=" text-primary">
-              <th>
-               Id
-              </th>
-              <th>
-               Title
-              </th>
-              <th>
-                Writer
-              </th>
-            <th>
-                Price
-              </th>
-              <th>
-                Image
-              </th>
-              
+              <th>Id </th>
+              <th> Title</th>  
+              <th>Writer</th>
+              <th>Price </th>
+              <th>Image </th>
               <th>Edit</th>
               <th>Delete</th>
-
-
+             
             </thead>
+              
+              
+           
+                
+             
+              
+              
+                
+             
+             
+
+
     
             <tbody>
             
@@ -108,44 +109,19 @@ books| admin panel
                 <td class="id_1"> {{$data->price}} </td> 
                 <td><img class="image_add" src="{{asset('storage/uploads/'.$data->images)}}" width="100px" height="100px" alert="image"></td> 
                  </td>
-                  <td> <a href="{{url('/edit-books/'.$data->id)}}" class="btn btn-success">Edit
-                  
-                  </a>
-                 
-                </td>
-
-                  <td>  
-
-                  
-                      <br><form action="{{url('/edit-books-delete/'.$data->id)}}" method="post">
-                       
+                  <td> <a href="{{url('/edit-books/'.$data->id)}}" class="btn btn-success">Edit   </a>
+                  </td><td>  
+                       <br><form action="{{url('/edit-books-delete/'.$data->id)}}" method="post">
+                    
                       {{csrf_field()}}
                       {{method_field('DELETE')}}
                   
                       <button  type="submit" class="btn btn-danger">Delete</button>
-                  
-              
+                  </form> 
 
-                      </form> 
-                    
                     </td>
-
-
-
-
-
-               
-               
-                
-                
-             
-                   
-               
-               
-       
-
-            
-              </tr>
+                    
+                       </tr>
             @endforeach  
 
             </tbody> 
@@ -161,7 +137,23 @@ books| admin panel
 
 @section('scripts')
 
+<script> let table = new DataTable('#datatable');</script>
+
 @endsection 
+       
+                  
+
+                  
+                
+                    
+                  
+              
+
+
+      
+
+            
+            
 
 
 
